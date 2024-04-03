@@ -17,7 +17,7 @@
 
 set -e
 
-DEVICE=y55
+DEVICE=PD1613
 VENDOR=vivo
 
 # Load extractutils and do some sanity checks

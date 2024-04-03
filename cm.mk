@@ -18,17 +18,17 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from PD1613 device
-$(call inherit-product, device/vivo/y55/device.mk)
+$(call inherit-product, device/vivo/PD1613/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/sm/config/common_full_phone.mk)
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Set those variables here to overwrite the inherited values.
 BOARD_VENDOR := vivo
-PRODUCT_DEVICE := y55
-PRODUCT_NAME := sm_y55
+PRODUCT_DEVICE := PD1613
+PRODUCT_NAME := cm_PD1613
 PRODUCT_BRAND := vivo
-PRODUCT_MODEL := vivo Y55
+PRODUCT_MODEL := vivo Y55A
 PRODUCT_MANUFACTURER := vivo
 
 # Overlays (inherit after vendor/cm to ensure we override it)

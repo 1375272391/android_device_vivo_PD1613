@@ -20,7 +20,7 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvi
 
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/vivo/y55/y55-vendor.mk)
+$(call inherit-product-if-exists, vendor/vivo/PD1613/PD1613-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -64,6 +64,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     audiod \
     audio.a2dp.default \
+    audio_amplifier.msm8937 \
     audio.primary.msm8937 \
     audio.r_submix.default \
     audio.usb.default \
@@ -71,7 +72,8 @@ PRODUCT_PACKAGES += \
     livivocompostprocbundle \
     livivocomvisualizer \
     livivocomvoiceprocessing \
-    tinymix
+    tinymix 
+    
 
 
 # Display

@@ -19,7 +19,7 @@ TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 # Assert
 TARGET_OTA_ASSERT_DEVICE := pd1613,PD1613
 
-LOCAL_PATH := device/vivo/y55
+LOCAL_PATH := device/vivo/PD1613
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8937
@@ -45,12 +45,12 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 -
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
 # Use prebuilt kernel if defined
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-        LOCAL_KERNEL := device/vivo/y55/kernel
+        LOCAL_KERNEL := device/vivo/PD1613/kernel
 else
         TARGET_KERNEL_ARCH := arm
         BOARD_KERNEL_IMAGE_NAME := zImage-dtb
         TARGET_KERNEL_APPEND_DTB := true
-        TARGET_KERNEL_CONFIG := lineageos_y55_defconfig
+        TARGET_KERNEL_CONFIG := lineageos_PD1613_defconfig
         TARGET_KERNEL_SOURCE := kernel/vivo/msm8937
 endif
 
@@ -75,6 +75,7 @@ USE_CUSTOM_AUDIO_POLICY := 1
 AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
 AUDIO_FEATURE_ENABLED_KPI_OPTIMIZE := true
 AUDIO_FEATURE_ENABLED_NEW_SAMPLE_RATE := true
+AUDIO_FEATURE_ENABLED_EXT_AMPLIFIER := true
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
@@ -185,4 +186,4 @@ WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/wlan.ko"
 WIFI_DRIVER_MODULE_NAME     := "wlan"
 
 # inherit from the proprietary version
--include vendor/vivo/y55/BoardConfigVendor.mk
+-include vendor/vivo/PD1613/BoardConfigVendor.mk

@@ -265,4 +265,4 @@ $(shell mkdir -p $(TARGET_OUT)/etc/firmware/wlan/prima; \
 
 endif
 
-include device/vivo/y55/tftp.mk
+include device/vivo/PD1613/tftp.mk

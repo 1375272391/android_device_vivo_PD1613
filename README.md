@@ -1,10 +1,10 @@
-Device Tree for vivo Y55 (PD1613)
+Device Tree for vivo Y55A/Y55L/Y55F (PD1613)
 ===========================================
 
 The vivo Y55  (codenamed _"PD1613"_) is a low-mid range smartphone from vivo.
 It was released in October 2016.
 
-Copyright (C) 2017 The SudaMod 2.0 Project.
+Copyright (C) 2017 The LineageOS Project.
 
 Basic   | Spec Sheet
 -------:|:-------------------------
@@ -22,6 +22,5 @@ Camera (front)	| 5 MP, f/2.4, 1080p (Omnivision OV5670)
 
 Team:
 LineageOS Project.
-qiurigao (qiurigao@163.com)
 
 ![vivo Y55](http://files.vivo.com.cn/static/www/vivo/y55/gallery/y55-b-1.jpg "vivo Y55")
