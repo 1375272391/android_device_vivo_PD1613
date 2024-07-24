@@ -60,3 +60,10 @@ on property:sys.shutdown.requested=*
     chmod 664 /persist/sensors/sensors_settings
     chown system root /persist/sensors/sensors_settings
     mkdir /data/misc/sensors 775 system root
+
+# for ssr_ramdump
+on property:persist.sys.ssr_ramdump=1
+	write /sys/module/subsystem_restart/parameters/enable_ramdumps 1
+	  
+on property:persist.sys.ssr_ramdump=0	 
+	write /sys/module/subsystem_restart/parameters/enable_ramdumps 0

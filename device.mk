@@ -28,13 +28,13 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/mixer_paths_mtp.PD1613.xml:system/etc/mixer_paths_mtp.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_mtp.PD1613.xml:system/etc/mixer_paths_mtp.PD1613.xml \
-    $(LOCAL_PATH)/audio/ftm-mixerpath.PD1613.xml:system/etc/ftm-mixerpath.PD1613.xml \
-    $(LOCAL_PATH)/audio/ftm-mixerpath.PD1613.xml:system/etc/ftm-mixerpath.default.xml \
-    $(LOCAL_PATH)/audio/tfa98xx_PD1613.cnt:system/etc/tfa98xx_PD1613.cnt \
-    $(LOCAL_PATH)/audio/tfa98xx_PD1613.cnt:system/etc/tfa98xx.cnt \
-    $(LOCAL_PATH)/audio/tfa98xx_tfa9897.cnt:system/etc/tfa98xx_tfa9897.cnt
+#    $(LOCAL_PATH)/audio/mixer_paths_mtp.PD1613.xml:system/etc/mixer_paths_mtp.xml \
+#    $(LOCAL_PATH)/audio/mixer_paths_mtp.PD1613.xml:system/etc/mixer_paths_mtp.PD1613.xml \
+#    $(LOCAL_PATH)/audio/ftm-mixerpath.PD1613.xml:system/etc/ftm-mixerpath.PD1613.xml \
+#    $(LOCAL_PATH)/audio/ftm-mixerpath.PD1613.xml:system/etc/ftm-mixerpath.default.xml \
+#    $(LOCAL_PATH)/audio/tfa98xx_PD1613.cnt:system/etc/tfa98xx_PD1613.cnt \
+#    $(LOCAL_PATH)/audio/tfa98xx_PD1613.cnt:system/etc/tfa98xx.cnt \
+#    $(LOCAL_PATH)/audio/tfa98xx_tfa9897.cnt:system/etc/tfa98xx_tfa9897.cnt
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
