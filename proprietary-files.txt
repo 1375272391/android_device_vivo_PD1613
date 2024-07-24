@@ -8,16 +8,6 @@ etc/firmware/leia_pfp_470.fw
 etc/firmware/leia_pm4_470.fw
 etc/firmware/qtc800s.bin
 etc/firmware/qtc800s.cfg
-etc/firmware/vivokeymaster.b00
-etc/firmware/vivokeymaster.b01
-etc/firmware/vivokeymaster.b02
-etc/firmware/vivokeymaster.b03
-etc/firmware/vivokeymaster.b04
-etc/firmware/vivokeymaster.b05
-etc/firmware/vivokeymaster.b06
-etc/firmware/vivokeymaster.mbn
-etc/firmware/vivokeymaster.mdt
-
 
 # WIFI Config
 etc/wifi/wpa_supplicant.conf
@@ -100,21 +90,8 @@ etc/audio_policy.conf
 vendor/etc/audio_effects.conf
 vendor/etc/audio_output_policy.conf
 etc/mixer_paths_double.xml
-etc/mixer_paths_mtp.PD1613BF_EX.xml
-etc/mixer_paths_mtp.PD1613F_EX.xml
-etc/mixer_paths_mtp.PD1613LG4.xml
-etc/mixer_paths_mtp.PD1613.xml
-etc/mixer_paths_mtp.PD1621F_EX.xml
-etc/mixer_paths_mtp.PD1621LG4.xml
-etc/mixer_paths_mtp.PD1621.xml
-etc/mixer_paths_mtp.PD1628F_EX.xml
-etc/mixer_paths_mtp.PD1628.xml
-etc/mixer_paths_mtp.SPD1608.xml
-etc/mixer_paths_mtp.TD1602_EX.xml
-etc/mixer_paths_mtp.TD1602.xml
-etc/mixer_paths_mtp.TD1605F_EX.xml
-etc/mixer_paths_mtp.TD1605.xml
-etc/mixer_paths_mtp.xml
+#etc/mixer_paths_mtp.PD1613.xml
+#etc/mixer_paths_mtp.xml
 etc/mixer_paths_qrd_sku1.xml
 etc/mixer_paths_qrd_sku2.xml
 etc/mixer_paths_qrd_skuhf.xml
@@ -135,31 +112,18 @@ etc/sound_trigger_mixer_paths.xml
 etc/sound_trigger_platform_info.xml
 
 # Call
-etc/ftm_test_config
-etc/qdcm_calib_data_mdss_dsi_pd1603a_d8064t_1080p_cmd_panel.xml
-etc/qdcm_calib_data_mdss_dsi_pd1616_s6e3fa5_1080p_cmd_panel.xml
+
+
 etc/wfdconfig.xml
-etc/tfa98xx_PD1613F_EX.cnt
-etc/tfa98xx_tfa9897.cnt
-etc/audio_effects.conf
+#etc/tfa98xx_PD1613.cnt
+#etc/tfa98xx_tfa9897.cnt
 etc/wfdconfigsink.xml
-etc/qdcm_calib_data_nt35521_720p_video_dsi_panel_truly.xml
-etc/qdcm_calib_data_nt35521_720p_video_dsi_panel_boechongqing.xml
-etc/ftm-mixerpath.PD1613F_EX.xml
+#etc/ftm-mixerpath.PD1613.xml
+#etc/ftm-mixerpath.default.xml
 etc/drc/drc_cfg_AZ.txt
 etc/drc/drc_cfg_5.1.txt
-etc/qdcm_calib_data_nt35521_720p_video_dsi_panel_boe.xml
-etc/qdcm_calib_data_nt35521_720p_video_dsi_panel_xinli_china.xml
+etc/ftm_test_config
 etc/ftm_test_config_wcd9335
-etc/tfa98xx_TD1602.cnt
-etc/ftm-mixerpath.PD1613.xml
-etc/ftm-mixerpath.default.xml
-etc/tfa98xx_PD1613.cnt
-etc/tfa98xx_TD1602_EX.cnt
-etc/ftm-mixerpath.TD1602.xml
-etc/ftm-mixerpath.TD1602_EX.xml
-etc/ftm-mixerpath.PD1613LG4.xml
-etc/qdcm_calib_data_nt35521_720p_video_dsi_panel_samsung.xml
 etc/afs_config.xml
 
 etc/surround_sound_3mic/surround_sound_rec_5.1.cfg
@@ -186,9 +150,10 @@ lib/modules/wlan.ko
 
 # Firmware
 vendor/firmware/libpn548ad_fw.so
-# LCD
+
+# 
 lib/hw/lights.msm8937.so
-###################################################################
+
 # fastrpc
 vendor/lib/libfastrpc_aue_stub.so
 vendor/lib/libfastrpc_utf_stub.so
@@ -198,8 +163,9 @@ lib/libcalibverify.so
 lib/libnightscene.so
 lib/libbacklight.so
 lib/libktv_qcom.so
+
 # vivo lib
-lib/libvivoAccountWave.so
+
 lib/libvivoCameraFilterPreviewJNI.so
 lib/libvivoCameraFilterPreview.so
 lib/libvivoCameraFilterShot.so
@@ -226,9 +192,19 @@ vendor/lib/libasn1cper.so
 vendor/lib/libasn1crt.so
 vendor/lib/libasn1crtx.so
 vendor/lib/libaudioparsers.so
-
 vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmdsprpc.so
 vendor/lib/libmdtpdemojni.so
 vendor/lib/libnative_audio_latency_jni.so
 
+#fot tfa98xx
+lib/libaudio-ftm.so
+bin/climax
+
+bin/tinycap
+bin/tinymix
+bin/tinypcminfo
+bin/tinyplay
+
+bin/ftmdaemon
+bin/mm-audio-ftm

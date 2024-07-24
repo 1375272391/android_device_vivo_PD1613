@@ -25,6 +25,17 @@ $(call inherit-product-if-exists, vendor/vivo/PD1613/PD1613-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+
+# Audio configuration
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/mixer_paths_mtp.PD1613.xml:system/etc/mixer_paths_mtp.xml \
+    $(LOCAL_PATH)/audio/mixer_paths_mtp.PD1613.xml:system/etc/mixer_paths_mtp.PD1613.xml \
+    $(LOCAL_PATH)/audio/ftm-mixerpath.PD1613.xml:system/etc/ftm-mixerpath.PD1613.xml \
+    $(LOCAL_PATH)/audio/ftm-mixerpath.PD1613.xml:system/etc/ftm-mixerpath.default.xml \
+    $(LOCAL_PATH)/audio/tfa98xx_PD1613.cnt:system/etc/tfa98xx_PD1613.cnt \
+    $(LOCAL_PATH)/audio/tfa98xx_PD1613.cnt:system/etc/tfa98xx.cnt \
+    $(LOCAL_PATH)/audio/tfa98xx_tfa9897.cnt:system/etc/tfa98xx_tfa9897.cnt
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
@@ -42,7 +53,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:system/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:system/etc/permissions/android.hardware.camera.raw.xml \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
@@ -64,14 +74,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     audiod \
     audio.a2dp.default \
-    audio_amplifier.msm8937 \
     audio.primary.msm8937 \
     audio.r_submix.default \
     audio.usb.default \
-    libaudio-resampler \
-    livivocompostprocbundle \
-    livivocomvisualizer \
-    livivocomvoiceprocessing \
+    libaudioroute \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
     tinymix 
     
 
@@ -112,13 +121,9 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
-
 # Lights
 PRODUCT_PACKAGES += \
     lights.msm8937
-
-
-
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
@@ -133,9 +138,11 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
-    libOmxSwVencHevc \
- #   libOmxVdec \
+    libOmxSwVdec \
+    libOmxSwVencMpeg4 \
+    libOmxVdec \
     libOmxVenc \
+    libOmxVpp \
     libstagefrighthw
 
 # Power
@@ -182,5 +189,6 @@ PRODUCT_PACKAGES += \
 # WCNSS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
-    $(LOCAL_PATH)/wifi/WCNSS_wlan_dictionary.dat:system/etc/firmware/wlan/prima/WCNSS_wlan_dictionary.dat \
-    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+    $(LOCAL_PATH)/wifi/WCNSS_wlan_dictionary.dat:system/etc/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
+
+

@@ -24,8 +24,6 @@
 # components.
 
 LOCAL_PATH := $(call my-dir)
-
-ifneq ($(filter ph2n,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
@@ -262,7 +260,5 @@ ALL_DEFAULT_INSTALLED_MODULES += $(WV_SYMLINKS)
 $(shell mkdir -p $(TARGET_OUT)/etc/firmware/wlan/prima; \
     ln -sf /data/misc/wifi/WCNSS_qcom_cfg.ini \
 	    $(TARGET_OUT)/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
-
-endif
 
 include device/vivo/PD1613/tftp.mk

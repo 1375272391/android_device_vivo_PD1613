@@ -1,3 +1,35 @@
+### from oem.prop
+ro.product.name=PD1613
+ro.product.device=PD1613
+ro.hardware.bbk=PD1613MA
+ro.vivo.hardware.version=PD1613MA
+ro.product.model.bbk=PD1613
+ro.vivo.product.model=PD1613
+persist.vivo.radio.type.abbr=A
+persist.vivo.radio.type.list=TD-SCDMA,WCDMA,CDMA,TDD-LTE,FDD-LTE,GSM
+ro.vivo.lcm.xhd=HD
+ro.sf.lcd_density=320
+ro.vivo.lte.voice.type=SGLTE
+
+ro.product.model=vivo Y55A
+ro.product.customize.bbk=N
+ro.vivo.product.release.model=Y55A
+ro.vivo.op.entry=FULL_SC
+ro.vivo.op.entry.version=
+persist.vivo.netlock=CTCC_CMCC_UNICOM
+persist.sys.vivo.product.cust=N
+persist.vivo.product.cust=N
+ro.vivo.product.cmiit_id=2016CP5215
+ro.build.g_test=0
+
+ro.build.emergency_base_os=vivo/PD1613/PD1613:6.0.1/MMB29M/compiler09291107:user/release-keys
+
+ro.vivo.oem.name=PD1613_FULL_SC
+ro.vivo.product.version=PD1613_A_1.19.34
+ro.build.version.bbk=PD1613_A_1.19.34
+ro.build.fingerprint=vivo/PD1613/PD1613:6.0.1/MMB29M/compiler03031539:user/release-keys
+ro.build.netaccess.version=PD1613_A_1.19.34
+
 #
 # from device/qcom/msm8937_32/system.prop
 #
@@ -339,3 +371,4 @@ persist.radio.sib16_support=1
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 af.fast_track_multiplier=1
 audio_hal.period_size=192
+audio.dolby.ds2.enabled=true
